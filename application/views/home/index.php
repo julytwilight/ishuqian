@@ -1,3 +1,6 @@
+<script type="text/javascript" src="js/jquery.simple-color.js"></script>
+<script type='text/javascript' src='js/js.js'></script>
+<script type='text/javascript' src='js/move.js'></script>
 <div class='left fleft' style='width:300px; border:solid 1px; margin-top:20px; margin-left: 20px;padding:20px'>
 	<a href='javascript:' class='add_bookmark'>add a bookmark</a>
 

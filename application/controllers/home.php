@@ -37,6 +37,7 @@ class Home extends MY_Controller
 	# 读取标题
 	public function readlink()
 	{
+		$this->load->helper('http');
 		$link = $this->input->post('link');
 
 		if ( !$link )

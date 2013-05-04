@@ -20,8 +20,10 @@ class Welcome extends MY_Controller
 	public function index()
 	{
 		$this->load->helper('form');
+		$this->load->library('weibo');
 		$this->load->model('bookmarks_model');
 		$data['bookmarks'] = $this->bookmarks_model->getList(0, 10, Null, Null, 0);
+		$data['weibo_url'] = $this->weibo->get_url();
 		$this->display('welcome_message', $data);
 	}
 }

@@ -20,14 +20,14 @@ class Accounts extends MY_Controller
 	public function login()
 	{
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
-		$this->form_validation->set_rules('password', 'Password', 'trim|max_length[20]');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|max_length[99]|valid_email');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|max_length[49]');
 
 		if ($this->form_validation->run() === False) {
-			die('Not empty!');
+			die(validation_errors());
 		} else {
 			$this->users_model->login();
-			redirect('/home');
+			die('success');
 		}
 	}
 
@@ -39,14 +39,14 @@ class Accounts extends MY_Controller
 	{
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[users.email]');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[20]');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|max_length[49]');
 		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[password]');
 
 		if ($this->form_validation->run() === False) {
-			$this->load->view('welcome_message');
+			die(validation_errors());
 		} else {
 			$this->users_model->register();
-			redirect('/');
+			die('success');
 		}
 	}
 

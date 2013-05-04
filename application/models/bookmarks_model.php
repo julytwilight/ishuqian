@@ -19,6 +19,7 @@ class Bookmarks_model extends CI_Model
 		if ( !$is_private )
 			$this->db->where('bookmarks.is_private', $is_private);
 		$this->db->limit($limit, $offset);
+		$this->db->order_by('bookmarks.addtime', 'desc');
 		$query = $this->db->get();
 		return $query->result_array();
 	}

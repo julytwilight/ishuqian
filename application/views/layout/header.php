@@ -1,53 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN">
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title> <?if(isset($title)):?> <?=$title?> <?else:?> 爱书签 <?endif?> </title>
 <base href='<?= base_url() ?>' />
+<meta charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no;" >
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="tencent-x5-page-direction" content="landscape" />
+<meta name="description" content=""/>
+<title> <?if(isset($title)):?> <?=$title?> <?else:?> 爱书签 <?endif?> </title>
+
 <link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
 <script type="text/javascript" src='js/jquery.js'></script>
 <script type="text/javascript" src='js/common.js'></script>
 </head>
 <body>
-
-<div class='header left'>
-	<h1>爱书签</h1>
-	<ul class='nav'>
-		<a href="/"><li>首页</li></a>
-		<a href="javascript:"><li>意见反馈</li></a>
-		<a href="javascript:"><li>关于我们</li></a>
-	</ul>
-	<? if ($this->session->userdata('email')): ?>
-		<div class='left'><a href="home">
-			<? if ($this->session->userdata('username')): ?>
-				<?=$this->session->userdata('username')?>
-			<? else: ?>
-				no setting username
-			<? endif ?></a>
-			, <a href="<?=base_url('logout')?>">Logout</a>
-		</div>
-	<? endif?>
-</div>
-
-<!-- Sign in && Sign up  -->
-	<? if (!$this->session->userdata('email')): ?>
-		<div class="sign-in-out">
-			<div class='signin'>
-				<?= validation_errors() . '<br />'; ?>
-				<?= form_open('login', array('name'=>'signin')) ?>
-					email: <input name='email' />
-					password: <input name='password' type='password' />
-					<input name='is_remember' type='checkbox' />remember me
-					<input type='submit' value='sign in' />
-				</form>
-			</div>
-
-			<div class='signup'>
-				<?= form_open('register', array('name'=>'signup')) ?>
-					email: <input name='email' />
-					password: <input name='password' type='password' />
-					comfirm : <input name='passconf' type='password' />
-					<input type='submit' value='sign up' />
-				</form>
-			</div>
-		</div>		
-	<? endif ?>
+    <div id='pager'>
+    	<div id='header'>
+    		<div class='header_top clearfix'>
+    			<div class='logo'><img src='./imgs/logo.png'></div>
+    			<div class='web_name'>ishuqian</div>
+    			<!--登陆后显示用户名密码-->
+    			<? if ($this->session->userdata('userid')): ?>
+    				<div class='left'><a href="home">
+    					<? if ($this->session->userdata('username')): ?>
+    						<?=$this->session->userdata('username')?>
+    					<? else: ?>
+    						no setting username
+    					<? endif ?></a>
+    					, <a href="<?=base_url('logout')?>">Logout</a>
+    				</div>
+    			<? endif?>
+    		</div>
+    		<div class='header_menu'>
+    			<ul>
+    				<li><a href='javascript:void(0)'>首页</a></li>
+    				<li><a href='javascript:void(0)'>意见反馈</a></li>
+    				<li><a href='javascript:void(0)'>关于我们</a></li>
+    			</ul>
+    		</div>
+    	</div>
