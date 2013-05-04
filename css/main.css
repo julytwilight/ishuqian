@@ -548,20 +548,20 @@ input:focus {
 .markCont .markTure input:hover{background:#0b55ce}
 #InmarkList{height:210px;}
 .mask{background:#000;position:absolute;z-index:9;left:0;top:0;display:none;opacity:0.6;filter:alpha(opacity=60);}
-  input#alert_button {
+input#alert_button {
     display: block;
-    margin-top: 20px;
-  }
+margin-top: 20px;
+}
 
-  .simpleColorDisplay {
+.simpleColorDisplay {
     font-family: Helvetica;
     margin: 10px 0;
-  }
-  .simpleColorChooser {
+}
+.simpleColorChooser {
     background-color: #fff;
-  }
+}
 
-  .button {
+.button {
     clear: right;
-  }
+}
 /*  end addMark */
