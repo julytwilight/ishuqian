@@ -79,7 +79,7 @@
         </div>
         <? endif ?>
     </div>
-</div>
+</div>   
 
 <script type="text/javascript">
 	$('.signup').submit(function(){
