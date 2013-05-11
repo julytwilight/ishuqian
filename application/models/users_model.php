@@ -32,7 +32,7 @@ class Users_model extends CI_Model
 		set_cookie( $this->session->userdata('userid'), $cookie_auth);
 
 		# 更新数据库用户的cookie_auth
-		$this->db->where('id', $this->session->userdara('userid'));
+		$this->db->where('id', $this->session->userdata('userid'));
 		$this->db->update('users', array('cookie_auth'=>$cookie_auth));
 
 		return True;

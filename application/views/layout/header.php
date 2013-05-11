@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="zh-CN">
 <head>
-<base href='<?= base_url() ?>' />
+<base href='<?php echo base_url() ?>' />
 <meta charset="UTF-8"/>
 <meta http-equiv="Cache-Control" content="no-cache" />
 <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no;" >
@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="tencent-x5-page-direction" content="landscape" />
 <meta name="description" content=""/>
-<title> <?if(isset($title)):?> <?=$title?> <?else:?> 爱书签 <?endif?> </title>
+<title> <?php if(isset($title)):?> <?php echo $title?> <?php else:?> 爱书签 <?php endif?> </title>
 
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
@@ -24,16 +24,16 @@
     			<div class='logo'><img src='./imgs/logo.png'></div>
     			<div class='web_name'>ishuqian</div>
     			<!--登陆后显示用户名密码-->
-    			<? if ($this->session->userdata('userid')): ?>
+    			<?php if ($this->session->userdata('userid')): ?>
     				<div class='left'><a href="home">
-    					<? if ($this->session->userdata('username')): ?>
-    						<?=$this->session->userdata('username')?>
-    					<? else: ?>
+    					<?php if ($this->session->userdata('username')): ?>
+    						<?php echo $this->session->userdata('username')?>
+    					<?php else: ?>
     						no setting username
-    					<? endif ?></a>
-    					, <a href="<?=base_url('logout')?>">Logout</a>
+    					<?php endif ?></a>
+    					, <a href="<?php echo base_url('logout')?>">Logout</a>
     				</div>
-    			<? endif?>
+    			<?php endif?>
     		</div>
     		<div class='header_menu'>
     			<ul>

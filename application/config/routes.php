@@ -47,6 +47,11 @@ $route['login'] = 'accounts/login';
 $route['register'] = 'accounts/register';
 $route['logout'] = 'accounts/logout';
 
+
+#从本地导入书签
+$route['import'] = 'bookmarks/import';
+$route['importHtml'] = 'bookmarks/importHtml';
+
 # 读取Link信息
 $route['readlink'] = 'home/readlink';
 

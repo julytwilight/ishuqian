@@ -19,6 +19,7 @@ class Welcome extends MY_Controller
 	 */
 	public function index()
 	{
+		
 		$this->load->helper('form');
 		$this->load->library('weibo');
 		$this->load->model('bookmarks_model');

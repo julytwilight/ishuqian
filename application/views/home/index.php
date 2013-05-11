@@ -17,14 +17,14 @@
 <div id="CreateList" class="MarkList">
 	<h3>创建新书签</h3>
     <div class="markCont">
-    	<?= form_open('bookmarks/create', array('name'=>'form_add_bookmark')) ?>
+    	<?php echo  form_open('bookmarks/create', array('name'=>'form_add_bookmark')) ?>
 	    	<p><span>链接：</span><input name='url' type="text" /></p>
 	        <p><span>标题：</span><input name='title' type="text" /></p>
 	        <p><span>分类：
 	        	<select name='list' style='display:inline'>
 		        	<option value='0'>无分类</option>
 		        	<?php foreach ($lists as $key => $value): ?>
-		        		<option value='<?=$value['id']?>'><?=$value['name']?></option>
+		        		<option value='<?php echo $value['id']?>'><?php echo $value['name']?></option>
 		        	<?php endforeach ?>
 	        	</select>
 	        </p>
@@ -93,7 +93,7 @@
                         <?php foreach ($lists as $key => $value): ?>
                         	<li>
                         	    <div class='li_l' style="background:#bdb9b8"></div>
-                        	    <div class='li_r' style="background:#e0dedf"><a href="home/favorites_list/"><a href="home/favorites_list/<?=$value['id']?>"><?=$value['name']?></a></a></div>
+                        	    <div class='li_r' style="background:#e0dedf"><a href="home/favorites_list/"><a href="home/favorites_list/<?php echo $value['id']?>"><?php echo $value['name']?></a></a></div>
                         	</li>
                         <?php endforeach ?>
                     </ul>
@@ -103,7 +103,7 @@
 	</div>
 	<div id='p_rightcon'>
 		<ul>
-			<? foreach ($bookmarks as $key => $value): ?>
+			<?php foreach ($bookmarks as $key => $value): ?>
 				<a href="" target='_blank'><li></li></a>
 				<li class='p_conlist'>
 				    <ul>
@@ -113,12 +113,12 @@
 				      <li></li>
 				    </ul> 
 				    <div class='rlitop'>
-				       <p><img src="imgs/favicon.png" width="16" height="16"><br><a href="<?=$value['url']?>"><?=$value['title']?></a></p>
+				       <p><img src="imgs/favicon.png" width="16" height="16"><br><a href="<?php echo $value['url']?>"><?php echo $value['title']?></a></p>
 				    </div>
 				    <div class='rlimid'>浏览<span>[931]</span> 赞<span>[89]</span></div>
 				    <div class='rlibottom'></div>
 				</li>
-			<? endforeach ?>
+			<?php endforeach ?>
 		</ul>
     </div>
 </div>

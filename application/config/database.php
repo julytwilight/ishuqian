@@ -48,12 +48,12 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'good123';
-$db['default']['database'] = 'ishuqian';
-$db['default']['dbdriver'] = 'mysqli';
-$db['default']['dbprefix'] = '';
+$db['default']['hostname'] = 'meigong568.gotoftp2.com';
+$db['default']['username'] = 'meigong568';
+$db['default']['password'] = 'z8735789';
+$db['default']['database'] = 'meigong568';
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = 'i_';
 $db['default']['pconnect'] = FALSE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
