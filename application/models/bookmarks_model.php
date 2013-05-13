@@ -5,11 +5,15 @@
  */
 class Bookmarks_model extends CI_Model
 {
+	function __construct()
+    {
+        parent::__construct();
+    }
 	# 获得书签列表
 	public function getList($offset = 0, $limit = 10, $user_id = Null, $list_id = Null, $is_private = 1)
 	{
 		$unclass = array();
-		$this->db->select('*');
+		$this->db->select('bookmarks.id as bid,bookmarks.*,lists.*');
 		$this->db->from('bookmarks');
 		$this->db->join('lists', 'bookmarks.list_id = lists.id');
 		if ( $user_id )
@@ -42,4 +46,23 @@ class Bookmarks_model extends CI_Model
 
 		$this->db->insert('bookmarks', $data);
 	}
+	
+	/**
+	 * 获取书签的信息
+	 */
+	public function getBookmarks($id)
+	{
+		$res = array();
+		if(empty($id) || !is_numeric($id)){
+			return array();
+		}
+    	$sql = "select * from i_bookmarks where id ={$id}";
+    	$query = $this->db->query($sql);
+    	if($query->num_rows() >0){
+    		return $query->result_array();	
+    	}else{
+    		return array();
+    	}		
+	}	
+	
 }

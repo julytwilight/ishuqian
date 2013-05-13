@@ -30,7 +30,7 @@ class MY_Controller extends CI_Controller
 
 	public function display($uri, $data = array())
 	{
-		$this->load->view('layout/header', $data);
-		$this->load->view($uri);
+		//$this->load->view('layout/header', $data); //modify by mark 有的页面不需要加载头部 在view文件直接包含
+		$this->load->view($uri,$data);
 	}
 }

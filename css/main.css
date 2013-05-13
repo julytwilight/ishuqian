@@ -566,3 +566,92 @@ margin-top: 20px;
     clear: right;
 }
 /*  end addMark */
+
+
+/*打开某个书签*/
+.i_bar{
+    background: #315796;
+    height: 39px;
+    left: 0;
+    min-width: 1000px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;    
+}
+.i_frame{
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    top:40px;
+}
+html{
+    overflow:hidden;
+}
+html, body{
+    overflow:hidden;
+}
+
+ul.i_bar_left {
+    float: left;
+    overflow: auto;
+}
+
+
+div.i_bar li {
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    height: 36px;
+    line-height: 37px;
+    overflow: hidden;
+}
+div.i_bar .i_logo {
+	float:left;
+}
+div.i_bar .i_logo a {
+    display: block;
+    position:relative;
+    left:40px;
+    width:40px;
+}
+div.i_bar li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+div.i_bar li.i_title {
+    max-width: 450px;
+    padding: 0 50px;
+}
+
+
+ul.i_bar_right {
+    float: right;
+    overflow: auto;
+}
+ul.i_bar_right li {
+    padding: 0 10px;
+}
+div.i_bar span.i_icon{
+    background: url("../imgs/sp-base.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    /*height: 36px;*/
+    padding-left: 18px;
+}
+
+div.i_bar span.icon_like {
+    background-position: 0 -74px;
+}
+div.i_bar span.icon_share {
+    background-position: 0 -100px;
+}
+
+div.i_bar span.icon_comment {
+    background-position: 0 -126px;
+}
+
+
+

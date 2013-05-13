@@ -1,3 +1,5 @@
+<?php $this->load->view('layout/header');?>
+
 <div class='header_info'>
     <ul>
         <li>
@@ -36,7 +38,8 @@
         <?php $i = 1; ?>
     	<?php foreach ($bookmarks as $key => $value): ?>
             <li class='li_nav'>
-                <div class='web_title blue'><?php echo $i++?>. <a href='<?php echo $value['url']?>' target='_blank'><?php echo $value['title']?></a></div>
+                <!--<div class='web_title blue'><?php echo $i++?>. <a href='<?php echo $value['url']?>' target='_blank'><?php echo $value['title']?></a></div>-->
+                <div class='web_title blue'><?php echo $i++?>. <a href='<?php echo site_url("show/{$value['bid']}") ?>' target='_blank'><?php echo $value['title']?></a></div>
                 <div class='gray'>
                     <span class='web_url'>&nbsp;</span>
                     <span class=' float-right'>11分钟前</span>
@@ -102,3 +105,4 @@
 	});
 </script>
 
+<?php $this->load->view('layout/footer');?>
