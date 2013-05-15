@@ -12,6 +12,44 @@
                 <li tooltip="说两句评论"><span class="i_icon icon_comment">评论 3</span></li>
                 <li tooltip=""><span class="i_icon"></span></li>
             </ul>
+            
+			<div class="ik_hove_panel" style="left: 819px; top: 36px;">
+				<div class="keepWrap">
+					<form method="post" action="/cmd/keep">
+						<h3>收藏网站</h3>
+						<div class="item">
+							<label>标题：</label>
+							<div class="input">
+								<input type="text" value="开发者问答" name="title">			
+							</div>						
+						</div>
+						<div class="item">
+							<label>分类：</label>
+							<div class="select selectCategory">
+								<span>请选择分类</span>
+							</div>					
+						</div>
+						<div class="item">
+							<label>标签：</label>
+							<div class="input inputTag">
+								<input type="text" name="tag" hint="请用逗号或空格分割" class="hint_blank">							
+							</div>						
+						</div>
+						<div class="show_btn">
+							<div class="checkbox">
+								<label><input type="checkbox" value="true" ekey="privacy" name="privacy">私藏</label>							
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" checked="checked" ekey="syncall">同步到</label>
+								<label><input type="checkbox" checked="checked" value="sina" name="share"><span class="icon_sina"></span></label>
+								
+							</div>
+							<button type="submit" class="main">提交</button>
+							
+						</div>					
+					</form>				
+				</div>			
+			</div>            
         </div>
 
         <iframe class="i_frame" frameborder="0" src="<?php echo $info[0]['url'] ?>" noresize="noresize" style='height:825px;'>
