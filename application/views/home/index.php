@@ -20,7 +20,7 @@
     	<?php echo  form_open('bookmarks/create', array('name'=>'form_add_bookmark')) ?>
 	    	<p><span>链接：</span><input name='url' type="text" /></p>
 	        <p><span>标题：</span><input name='title' type="text" /></p>
-	        <p><span>分类：
+	        <p><span>分类：</span>
 	        	<select name='list' style='display:inline'>
 		        	<option value='0'>无分类</option>
 		        	<?php foreach ($lists as $key => $value): ?>
@@ -73,7 +73,7 @@
 				<div id="p_gr"></div>
 			</div>
 			<div id='p_himg'>
-				<img src='imgs/prehead.png'>
+				<img src='./imgs/prehead.png'>
 			</div>
 			<div id='p_hname'>jammy</div>
 			<div id='p_lfixed'>
