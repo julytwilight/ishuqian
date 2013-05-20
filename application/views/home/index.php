@@ -1,4 +1,7 @@
 <!-- <script type="text/javascript" src="js/jquery.simple-color.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+<script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/js.js'></script>
 <script type='text/javascript' src='js/move.js'></script>
 
