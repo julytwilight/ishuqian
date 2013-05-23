@@ -45,6 +45,7 @@ class Bookmarks_model extends CI_Model
 		);
 
 		$this->db->insert('bookmarks', $data);
+		return $this->db->affected_rows(); //add by mark 2013-05-23 13:09:21
 	}
 	
 	/**

@@ -12,7 +12,7 @@ class Bookmarks extends MY_Controller
 		parent::__construct();
 		# 如果用户没有登录 跳转到首页或登陆页面
 		if ( !$this->session->userdata('userid') )
-			//redirect('/');  //modify by mark 2013-05-13 15:59:50 先注释掉
+			redirect('/');  //modify by mark 2013-05-13 15:59:50 先注释掉
 
 		$this->load->model('bookmarks_model');
 	}
@@ -108,13 +108,32 @@ class Bookmarks extends MY_Controller
 			show_404();
 		}
 		
+		
 		$this->load->model('bookmarks_model');
 		$data['info']  = $this->bookmarks_model->getBookmarks($id);
 		
-		//echo "<pre>";print_r($res);exit;
+		//获取分类信息
+		$this->load->model('lists_model');
+		$userid = $this->session->userdata('userid');
+		$data['cat_info'] = $this->lists_model->getCatInfo($userid);
+				
+		//echo "<pre>";print_r($data);exit;
 		//echo $a;
 		$data['name'] = 'meigong';
 		$this->display('show', $data);
+	}		
+	
+	
+	/**
+	 * 收藏书签
+	 */
+	public function like(){
+
+		$this->load->model('bookmarks_model');
+		$res  = $this->bookmarks_model->create();
+		echo json_decode($res);exit;
+
+	
 	}		
 	
 }

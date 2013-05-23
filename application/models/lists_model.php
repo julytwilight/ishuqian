@@ -31,4 +31,23 @@ class Lists_model extends CI_Model
 
 		return array('status' => 100, 'data' => $this->db->insert_id());
 	}
+	
+	
+	/**
+	 * 获取分类的信息
+	 */
+	public function getCatInfo($userid)
+	{
+		$res = array();
+		if(empty($userid) || !is_numeric($userid)){
+			return array();
+		}
+    	$sql = "select * from i_lists where user_id ={$userid}";
+    	$query = $this->db->query($sql);
+    	if($query->num_rows() >0){
+    		return $query->result_array();	
+    	}else{
+    		return array();
+    	}		
+	}		
 }

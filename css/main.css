@@ -660,10 +660,13 @@ div.ik_hove_panel {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     padding: 10px;
     position: absolute;
-    top: 36px;
+    top: 39px;
     z-index: 201;
+    right:170px;;
 }
-
+.main_btn{
+	float:right;
+}
 div.ik_hove_panel div.keepWrap {
     width: 350px;
 }
@@ -736,4 +739,13 @@ div.keepWrap div.show_btn button {
 
 a.sina, span.icon_sina {
     background-position: 0 -2px;
+}
+.item_select{
+    border: 0 none;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 6px 0 0;
+    width: 300px;	
+	
 }

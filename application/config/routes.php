@@ -56,6 +56,9 @@ $route['importHtml'] = 'bookmarks/importHtml';
 #打开书签链接
 $route['show/(:num)'] = 'bookmarks/show/$1';
 
+#收藏书签
+$route['like'] = 'bookmarks/like';
+
 # 读取Link信息
 $route['readlink'] = 'home/readlink';
 
